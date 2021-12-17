@@ -1,0 +1,36 @@
+<!--
+  Copyright (c) 2021, Oracle and/or its affiliates.
+  Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl/ 
+-->
+
+<!--
+  HTML for the Header Component.
+-->
+<header id="header">
+
+  <!-- Header Logo -->
+  <a [routerLink]="['/page', pages[0].slug]">
+    <picture>
+      <source type="image/webp" srcset={{headerRenditionURLs.srcset}} />
+      <img id="header-image" src={{headerRenditionURLs.native}} alt="Company Logo"
+        width={{headerRenditionURLs.width}} height={{headerRenditionURLs.height}} />
+    </picture>
+  </a>
+
+  <!-- Pages Nav -->
+  <nav>
+    <button id="nav-menu-button" (click)="onDropDownMenuButtonClicked()">☰</button>
+    <ul id="nav-menu-items">
+      <div *ngFor="let page of pages; index as i; ">
+        <li>
+          <a
+            [ngClass]="(currentPageSlug===page.slug )?'active':''"
+            style="text-decoration: none;"
+            (click)="onMenuItemClicked(i)"
+            [routerLink]="['/page', page.slug]">{{page.name}}</a>
+        </li>
+      </div >
+
+    </ul>
+  </nav>
+</header>

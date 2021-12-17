@@ -1,0 +1,25 @@
+<!--
+  Copyright (c) 2021, Oracle and/or its affiliates.
+  Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl/ 
+-->
+
+<!--
+  HTML for the Footer Component.
+-->
+
+<footer id="footer">
+  <!-- Logo -->
+  <picture>
+    <source type="image/webp" srcset={{footerRenditionURLs.srcset}} sizes="300px" />
+    <img id="footer-image" src={{footerRenditionURLs.native}} alt="Footer Logo"
+      width="{{footerRenditionURLs.width}}" height="{{footerRenditionURLs.height}}"/>
+  </picture>
+
+  <!-- Social Media Icons -->
+  <div class="social-media-menu">
+    <a href="https://www.facebook.com/Oracle/"><img src="assets/facebook.png" alt="Facebook"/></a>
+    <a href="https://www.linkedin.com/company/oracle/"><img src="assets/linkedin.png" alt="Linked In"/></a>
+    <a href="https://twitter.com/Oracle"><img src="assets/twitter.png" alt="Twitter"/></a>
+    <a href="https://www.youtube.com/oracle/"><img src="assets/youtube.png" alt="You Tube"/></a>
+  </div>
+</footer>
